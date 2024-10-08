@@ -12,7 +12,7 @@ if (SERVER_CHANNEL_URL) {
 }
 
 const importers = {
-  './dist/stories/index.stories.js': () => import('./index.stories-DWNZF1y0.js')
+  './dist/stories/index.stories.js': () => import('./index.stories-B-ykSCLP.js')
 };
 
 function importFn(path) {
@@ -21,7 +21,7 @@ function importFn(path) {
 
 const getProjectAnnotations = async () => {
   const configs = await Promise.all([
-    import('./entry-preview-mVTTBp0W.js')
+    import('./entry-preview-B1CopTMm.js')
   ]);
   return __STORYBOOK_MODULE_PREVIEW_API__.composeConfigs(configs);
 };

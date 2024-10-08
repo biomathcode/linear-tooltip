@@ -1,4 +1,4 @@
-import { u, f, i, h, k as ke } from './lit-element-C1CIaNfO.js';
+import { u, f, i, r as r$1, x } from './lit-element-CecHSWoY.js';
 
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -1284,7 +1284,7 @@ const computePosition = (reference, floating, options) => {
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
-class LinearTooltip extends h {
+class LinearTooltip extends r$1 {
     constructor() {
         super(...arguments);
         this.offset = 4;
@@ -1350,7 +1350,7 @@ class LinearTooltip extends h {
         this.addEventListener('transitionend', this.finishHide);
     }
     render() {
-        return ke ` <slot><slot> </slot></slot> `;
+        return x ` <slot><slot> </slot></slot> `;
     }
 }
 LinearTooltip.styles = i `
@@ -1391,7 +1391,7 @@ var index_stories = {
         textColor: { control: 'color' },
     },
 };
-const Template = ({ header = 'Hello world', counter = 5, textColor, slot, }) => ke `
+const Template = ({ header = 'Hello world', counter = 5, textColor, slot, }) => x `
   <linear-tooltip
     style="--linear-tooltip-text-color: ${textColor || 'black'}"
     .header=${header}
@@ -1411,7 +1411,7 @@ CustomCounter.args = {
 };
 const SlottedContent = Template.bind({});
 SlottedContent.args = {
-    slot: ke `<p>Slotted content</p>`,
+    slot: x `<p>Slotted content</p>`,
 };
 SlottedContent.argTypes = {
     slot: { table: { disable: true } },
