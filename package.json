@@ -26,13 +26,13 @@
     "storybook": "tsc && npm run analyze -- --exclude dist && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"storybook dev -p 8080\"",
     "storybook:build": "tsc && npm run analyze -- --exclude dist && storybook build",
     "predeploy": "tsc && npm run analyze -- --exclude dist && storybook build",
-
     "deploy-storybook": "gh-pages -d storybook-static",
     "release": "npm run build && changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
     "@floating-ui/dom": "^1.6.11",
+    "gh-pages": "^6.1.1",
     "lit": "^3.1.4"
   },
   "devDependencies": {

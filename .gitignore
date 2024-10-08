@@ -19,6 +19,7 @@
 /_site/
 /dist/
 /out-tsc/
+/package-lock.json
 
 storybook-static
 custom-elements.json
