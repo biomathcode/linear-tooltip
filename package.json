@@ -8,6 +8,7 @@
   "type": "module",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
+  "homepage": "https://biomathcode.github.io/linear-tooltip",
   "exports": {
     ".": "./dist/src/index.js",
     "./linear-tooltip.js": "./dist/src/linear-tooltip.js"
@@ -23,7 +24,9 @@
     "test": "tsc && wtr --coverage",
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\"",
     "storybook": "tsc && npm run analyze -- --exclude dist && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"storybook dev -p 8080\"",
-    "storybook:build": "tsc && npm run analyze -- --exclude dist && storybook build"
+    "storybook:build": "tsc && npm run analyze -- --exclude dist && storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "release": "npm run build && changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",
