@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <style>
+        .box {
+        height: 80px;
+        width: 80px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: steelblue;
+      }
+    </style>
+
+    <script type="module">
+            import { html, render } from 'lit';
+
+            import '../dist/src/linear-tooltip.js'
+
+          import {tooltip} from '../dist/src/index.js'
+
+
+            const header = 'Hello owc World!';
+
+
+            render(
+              html`
+              <h3>Some boxes hinted with tooltips</h3>
+            <section>
+              <div class="box">1</div>
+              <linear-tooltip>This is box 1.</linear-tooltip>
+              <div class="box">2</div>
+              <linear-tooltip>This is box 2.</linear-tooltip>
+              <div class="box right">3</div>
+              <linear-tooltip>This is box 3 and it's way off on its own.</linear-tooltip>
+            </section>
+
+            <p>
+        <span ${tooltip(html`Pratik Sharam there's coffee available in the lounge.`)}>
+          Hello,
+        </span>
+      </p>
+              `,
+              document.querySelector('#demo')
+            );
+    </script>
+  </body>
+</html>
